@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<HTML lang ="es">
+<HEAD>
+	<Meta charset="UTF-8">
+	<Title>SOLUCIONES CONTABLES ECT</Title>
+	<style>
+		body {
+			font-family: 'Segoe Ui', sans-serif;
+			background-color: #bff2ff;
+			margin: 0;
+		}
+		header {
+			background-image: url('https://images.unsplash.com/photo-1491466424936-e304919aada7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG8lMjBkZSUyMHBhbnRhbGxhJTIwNGt8ZW58MHx8MHx8fDA%3D');
+			background-size: cover;
+			background-position: center;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+		}
+		header h1{
+			background-color: rgba(0, 0, 0, 0.5);
+			display: inline-block;
+			padding: 10px 20px;
+			border-radius: 10px;
+		}
+		.contenedor {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+			padding: 20px;
+		}
+		.producto {
+			background-color: #ffffff;
+			width: 300px;
+			padding: 15px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+			transition: transform 0.3s ease;
+		}
+		.producto:hover {
+			transform: scale(1.03);
+		}
+		img {
+			width: 100%;
+			border-radius: 10px;
+		}
+		h2 {
+			font-size: 20px;
+			color: #333;
+		}
+		p {
+			font-size: 14px;
+			color: #555;
+		}
+		.boton-compra {
+			background-color: #27ae60;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			width: 100%;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s ease;
+		}
+		.boton-compra:hover {
+			background-color: #219150;
+		}
+		.contacto {
+			text-align: center;
+			padding: 10px;
+			background-color: #000d56;
+		}
+		.contacto a {
+			text-decoration: none;
+			margin: 0 10px;
+			color: #2cbb4f;
+			font-weight: bold;
+			font-size: 18px;
+			transition: color 0.3 ease;
+		}
+		.contacto a:hover {
+			color: #95fcae;
+		}
+		
+		/*Estilos para ventanas emergentes */
+		.popup {
+			display: none;
+			position: fixed;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			background-color: rgba(0,0,0,0.6);
+			justify-content: center;
+			aling-items: center;
+			z-index: 999;
+		}
+		.popup-contenido {
+			background: white;
+			padding: 30px;
+			border-radius: 15px;
+			text-align: center;
+			max-width: 400px;
+			box-shadow: 0 0 15px rgba(0,0,0,0.5);
+			animation: entrada 0.5s ease;
+		}
+		.popup-contenido img {
+			width: 80px;
+			margin-bottom: 15px;
+		}
+		.popup-contenido h2 {
+			margin: 0 0 10px 0;
+		}
+		.cerrar {
+			margin-top: 15px;
+			padding: 8px 20px;
+			background-color: #27ae60;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		@keyframes entrada {
+			from { transform: scale (0.7); opacity: 0;}
+			to { transform: scale(1); opacity: 1; }
+		}
+		.Etiquetas {
+			background-color: #000d56;
+			background-size: cover;
+			background-position: center;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+		}
+
+	</style>
+</HEAD>
+<body>
+
+<header>
+	<h1> Soluciones Contables ECT</h1>
+</header>
+
+<section class="Etiquetas">
+
+	<h2 style="color: white">Tramites ante las siguientes instituciones</h2>
+	
+	<a href="https://portal.sat.gob.gt/portal/" target="_blank">
+		<button style="background-color: #ffffff; color: #09006e; padding: 10px; border-radius: 8px;"><strong>Superintendencia de Administración Tributaria</strong></button>
+	</a>
+
+	<a href="https://www.registromercantil.gob.gt/webrm/" target="_blank">
+		<button style="background-color: #ffffff; color: #09006e; padding: 10px; border-radius: 8px;"><strong>Registro Mercantil</strong></button>
+	</a>
+
+	<a href="https://www.contraloria.gob.gt/" target="_blank">
+		<button style="background-color: #ffffff; color: #09006e; padding: 10px; border-radius: 8px;"><strong>Contraloría General de Cuentas</strong></button>
+	</a>
+
+	<a href="https://portal.oj.gob.gt/" target="_blank">
+		<button style="background-color: #ffffff; color: #09006e; padding: 10px; border-radius: 8px;"><strong>Organismo Judicial</strong></button>
+	</a>
+	
+	<a href="https://pnc.gob.gt/" target="_blank">
+		<button style="background-color: #ffffff; color: #09006e; padding: 10px; border-radius: 8px;"><strong>Policía Nacional Civil</strong></button>
+	</a>
+
+</section>
+
+<section class="contenedor">
+	
+	<div class="producto">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Organismo_Judicial_Guatemala_Logo.svg/330px-Organismo_Judicial_Guatemala_Logo.svg.png" alt="Apenales" width="200" height="300">
+		<h2>Antecedentes penales</h2>
+		<p><strong>Q.30.00</strong></p>
+		<p>Requisitos: DPI</p>
+		<button class="boton-compra" onclick="mostrarPopup('Antecedentes Penales')">Solicitar</button>
+	</div>
+	
+	<div class="producto">
+		<img src="https://i0.wp.com/pnc.gob.gt/wp-content/uploads/2023/08/Logo-PNC.png?ssl=1" alt="Apoliciacos" width="200" height="300">
+		<h2>Antecedentes policiacos</h2>
+		<p><strong>Q.30.00</strong></p>
+		<p>Requisitos: DPI y contraseña de perfil</p>
+		<button class="boton-compra" onclick="mostrarPopup('Antecedentes policiacos')">Solicitar</button>
+	</div>
+	
+	<div class="producto">
+		<img src="https://portal.sat.gob.gt/portal/wp-content/uploads/2021/08/Celeste-RTU-DIGITAL-600x480.jpg" alt="RTU" width="200" height="300">
+		<h2>Tramite de NIT</h2>
+		<p><strong>Q.100.00</strong></p>
+		<p>Requisitos: DPI, recibo de luz y numero de telefono</p>
+		<button class="boton-compra" onclick="mostrarPopup('Tramite de NIT')">Solicitar</button>
+	</div>
+	
+	<div class="producto">
+		<img src="https://www.soy502.com/sites/default/files/styles/full_node/public/2021/Ene/21/pasos_traspaso_vehiculos_sat_soy502_guatemala.jpg" alt="Traspaso" width="200" height="300">
+		<h2>Traspaso de vehiculos</h2>
+		<p><strong>*Precio variable según el modelo del vehiculo*</strong></p>
+		<p>Requisitos: DPI (De ambas partes), Contar con agencia Virtual SAT y RTU actualizado, certificado de propiedad y tarjeta de circulación vigente</p>
+		<button class="boton-compra" onclick="mostrarPopup('Traspaso de vehiculos')">Solicitar</button>
+	</div>
+	
+	<div class="producto">
+		<img src="https://www.contraloria.gob.gt/wp-content/uploads/2023/10/Guia-Titulos-DIVERSIFICADO-1.png" alt="R.Titulo" width="200" height="300">
+		<h2>Registro de título ante la contraloría</h2>
+		<p><strong>Q.150.00</strong></p>
+		<p>Requisitos: DPI, NIT, número de telefono, correo electrónico, *Título*</p>
+		<button class="boton-compra" onclick="mostrarPopup('Registro de título ante la contraloría')">Solicitar</button>
+	</div>
+	
+	<div class="producto">
+		<img src="https://yt3.googleusercontent.com/dL2UIqor6XoL8FEAF3ExOhb-dNb8ZXzDB8SWVnfjumBXpr5ECVk_iJqKfLBikmMJWtOZOQXB5g=s900-c-k-c0x00ffffff-no-rj" alt="SAT" width="200" height="300">
+		<h2>Pago de impuestos (Circulación, IVA, ISR, ISO, etc.)</h2>
+		<p><strong>*Precio variable según el impuesto a pagar*</strong></p>
+		<p>*Requisitos variables según el impuesto a pagar*</p>
+		<button class="boton-compra" onclick="mostrarPopup('Pago de impuestos')">Solicitar</button>
+	</div>
+	
+</section>
+
+<div class="contacto">
+	<h3 style="color: white">Contáctanos</h3>
+	<a href="https://whatsapp.com" target="_blank">💬 WhatsApp</a>
+	<a href="https://facebook.com" target="_blank">📱 Facebook</a>
+	<a href="tel:+50250417681" target="_blank">📞 Telefono</a>
+	<a href="mailto:soluciones@contables.gt" target="_blank">📧 Correo</a>
+</div>
+
+<div class="popup" id="popup">
+	<div class="popup-contenido">
+	<img src="https://media.istockphoto.com/id/1416145560/es/vector/c%C3%ADrculo-verde-con-marca-verde-icono-plano-de-pegatina-ok-icono-de-marca-de-verificaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=EbbsG4FqVnbxm8_rQu9I8y6cHt91IVjZlz-y2SrucqY=" alt="Éxito">
+	<h2>¡Solicitud Realizada!</h2>
+	<p id="mensajeProducto"></p>
+	<button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+	</div>
+</div>
+
+<script>
+	function mostrarPopup(producto) {
+		document.getElementById("mensajeProducto").innerText = "Has solicitado: " + producto + ". Te contactaremos pronto.";
+		document.getElementById("popup").style.display = "flex";
+	}
+	function cerrarPopup() {
+		document.getElementById("popup").style.display = "none";
+	}
+</script>
+
+</body>
+</HTML>
